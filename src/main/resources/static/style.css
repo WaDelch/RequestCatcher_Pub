@@ -1,0 +1,141 @@
+.mainFrame {
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 100px;
+    width: 60%;
+}
+.mainFrame a {
+    float: right;
+}
+
+#searchBar {
+    float: right;
+}
+
+.contTable {
+    height: 700px;
+    overflow: auto;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+table {
+    border: 5px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+tr:nth-of-type(odd) {
+    background-color: #E6E6E6;
+}
+
+th {
+    position: sticky;
+    top: 0px;
+    background-color: #0e94c4;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: left;
+    padding: 15px;
+}
+
+.tHead:hover{
+    background-color: #38c3f5;
+    cursor: pointer;
+}
+
+td {
+    padding: 15px;
+}
+
+.tdReqData {
+    height: 60px;
+    float: left;
+    overflow-x: auto;
+}
+
+.tDateTime {
+    width: 18%;
+}
+.tLType {
+    width: 12%;
+}
+.tLMsg {
+    width: 70%;
+}
+/*
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #FF0000;
+}
+*/
+
+
+
+/*.rowClick:hover, .rowClick:hover a {*/
+.rowClick:hover {
+    cursor: crosshair;
+    background-color: #7F7F7F;
+    color: #FFFFFF;
+}
+
+.rowClick a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.nav-container {
+    background-color: #0e94c4;
+    height: 70px;
+    width: 100%;
+    /*text-align:center;*/
+    overflow: auto;
+}
+
+.nav-container img {
+    float: left;
+    height: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+    /*padding: 10px 0px 0px 10px;*/
+}
+
+.nav-container ul {
+    padding: 0px;
+    margin: 0px;
+    /*text-align: center;*/
+    display: inline-block;
+    vertical-align: top;
+}
+
+.nav-container li {
+    list-style-type: none;
+    color: #EBE8E8;
+    padding: 0px;
+    height: 24px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    display: inline;
+}
+
+.nav-container li a {
+    color: #BFBFBF;
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+    line-height: 70px;
+    padding: 5px 15px;
+}
+
+.nav-container li a:hover {
+    /*background-color: #96173A;*/
+    text-decoration: underline;
+    color: white;
+}

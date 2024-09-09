@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <title>Request Archive</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+    <script src="sort.js"></script>
+    <script th:inline="javascript">
+        function rowClick(value) {
+            location.href = "/api/showReq/" + value;
+        }
+    </script>
+</head>
+<body>
+<nav th:insert="~{nav.html :: navbar}"></nav>
+
+<div class="mainFrame">
+    <h2>Request Archive</h2>
+    Number of Entries: <span id="numReq" th:text="${numReq}"></span>
+    <br>
+    <div class="contTable">
+        <table id="reqTable">
+            <thead>
+            <tr id="tableHeader">
+                <th class="tHead" title="Click to sort by this column" scope="col" onclick="sortTable(0, 'reqTable')">
+                    ID
+                </th>
+                <th class="tHead" title="Click to sort by this column" scope="col" onclick="sortTable(1, 'reqTable')">
+                    CREATION_TIMESTAMP
+                </th>
+                <th class="tHead" title="Click to sort by this column" scope="col" onclick="sortTable(2, 'reqTable')">
+                    DATA
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr class="rowClick" th:each="req :${reqList}">
+                <td th:text="${req.id}" th:id="${req.id}" onclick="rowClick(this.getAttribute('id'))"></td>
+                <td th:text="${req.dateTime}" th:id="${req.id}" onclick="rowClick(this.getAttribute('id'))"></td>
+                <td class="tdReqData" th:text="${req.data}" th:id="${req.id}" onclick="rowClick(this.getAttribute('id'))"></td>
+                </form>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
