@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
     <script src="sort.js"></script>
+    <script src="search.js"></script>
     <script th:inline="javascript">
         function rowClick(value) {
             location.href = "/api/showReq/" + value;
@@ -18,6 +19,7 @@
 <div class="mainFrame">
     <h2>Request Archive</h2>
     Number of Entries: <span id="numReq" th:text="${numReq}"></span>
+    <input id="searchBar" type="text" placeholder="search for entries..." onkeyup="searchTable('reqTable')">
     <br>
     <div class="contTable">
         <table id="reqTable">
